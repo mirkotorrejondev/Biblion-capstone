@@ -1,0 +1,282 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.loadingContainer,
+.errorContainer,
+.noResultsContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+  padding: 3rem;
+  text-align: center;
+}
+
+.loadingContainer h2 {
+  color: var(--contrast-color);
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.errorContainer h2 {
+  color: var(--error-color);
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.noResultsContainer h2 {
+  color: var(--text-muted);
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.controlsSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  background: var(--card-background);
+  border-radius: 12px;
+  box-shadow: 0 2px 8px var(--shadow-color);
+}
+
+.controlGroup {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.controlGroup label {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 1rem;
+  color: var(--text-alternative);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  outline: none;
+  min-width: 120px;
+}
+
+.pageSelector:focus {
+  border-color: var(--contrast-color);
+}
+
+.pageInfo {
+  font-size: 1rem;
+  color: var(--text-alternative);
+  font-weight: 500;
+  padding: 0 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+
+  .controlsSection {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+  }
+
+  .controlGroup {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .controlGroup label {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .controlSelect {
+    width: 100%;
+  }
+
+  .resultHeader {
+    padding: 1rem;
+  }
+
+  .resultHeader h2 {
+    font-size: 1.2rem;
+  }
+
+  .booksContainer {
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .paginationContainer {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .paginationButton,
+  .pageSelector {
+    width: 100%;
+    min-width: auto;
+  }
+}
+
+.controlSelect {
+  padding: 0.75rem 1.25rem;
+  border: 2px solid var(--input-border);
+  border-radius: 8px;
+  background: var(--input-background);
+  color: var(--text-alternative);
+  font-size: 0.95rem;
+  cursor: pointer;
+  outline: none;
+  min-width: 120px;
+}
+
+.controlSelect:focus {
+  border-color: var(--contrast-color);
+}
+
+.result {
+  margin: 2rem 0;
+}
+
+.resultHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  background: var(--contrast-color);
+  border-radius: 12px 12px 0 0;
+  color: var(--text-color);
+  margin-bottom: 0;
+  box-shadow: 0 2px 8px var(--shadow-color);
+}
+
+.resultHeader h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.booksContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 2rem;
+  background: var(--overlay-light);
+  border-radius: 0 0 12px 12px;
+}
+
+.paginationContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.paginationButton {
+  padding: 0.75rem 1.5rem;
+  background: var(--contrast-color);
+  color: var(--text-color);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: 2px solid var(--contrast-color);
+  border-radius: 8px;
+  min-width: 100px;
+}
+
+.paginationButton:hover:not(:disabled) {
+  opacity: 0.9;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px var(--shadow-color);
+}
+
+.paginationButton:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  border-color: var(--card-border);
+  background: var(--card-background);
+  color: var(--text-muted);
+}
+
+.pageSelector {
+  padding: 0.75rem 1.25rem;
+  border: 2px solid var(--contrast-color);
+  border-radius: 8px;
+  background: var(--input-background);
+  color: var(--text-alternative);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  outline: none;
+  min-width: 120px;
+}
+
+.pageInfo {
+  font-size: 1rem;
+  color: #2c2c2c;
+  font-weight: 500;
+  padding: 0 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+
+  .controlsSection {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+  }
+
+  .controlGroup {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .controlGroup label {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .controlSelect {
+    width: 100%;
+  }
+
+  .resultHeader {
+    padding: 1rem;
+  }
+
+  .resultHeader h2 {
+    font-size: 1.2rem;
+  }
+
+  .booksContainer {
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .paginationContainer {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .paginationButton,
+  .pageSelector {
+    width: 100%;
+    min-width: auto;
+  }
+}
