@@ -89,3 +89,15 @@ header {
 section {
   padding: 3rem;
 }
+
+.not-found {
+  background-color: var(--background-color);
+  color: var(--text-alternative);
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+}

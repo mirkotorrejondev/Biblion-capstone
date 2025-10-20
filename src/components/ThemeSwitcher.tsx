@@ -17,7 +17,11 @@ function ThemeSwitcher() {
 
   return (
     <div className={styles.container}>
-      <button className={styles.button} onClick={() => dispatch(toggleTheme())} aria-label="Toggle theme">
+      <button
+        className={styles.button}
+        onClick={() => dispatch(toggleTheme())}
+        aria-label="Toggle theme"
+      >
         {theme === "light" ? <Sun /> : <Moon />}
       </button>
     </div>

@@ -11,6 +11,9 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  experimental: {
+    globalNotFound: true,
+  },
 };
 
 export default nextConfig;
